@@ -16,7 +16,7 @@ public class CashbackHackServiceTest {
     @Test
     public void shouldCalculateWhereAmountBiggerThanBoundaryWithoutReminder(){
         int amount = 2000;
-        int expected = 0;  // Исправлено: 2000 % 1000 = 0
+        int expected = 0;  
         Assert.assertEquals(expected, service.remain(amount));
     }
     
@@ -30,11 +30,11 @@ public class CashbackHackServiceTest {
     @Test
     public void shouldCalculateWhereAmountEqualsBoundary(){
         int amount = 1000;
-        int expected = 0;  // Исправлено: 1000 % 1000 = 0
+        int expected = 0;  
         Assert.assertEquals(expected, service.remain(amount));
     }
     
-    // Дополнительные тесты для проверки граничных случаев
+   
     @Test
     public void shouldReturnZeroWhenAmountIsZero(){
         int amount = 0;
